@@ -1,0 +1,22 @@
+# Environnements Virtuels
+venv/
+env/
+.venv/
+
+# Variables d'environnement (CRITIQUE)
+.env
+.env.*
+
+# Fichiers compilés Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Fichiers de base de données locaux (si utilisés un jour)
+*.sqlite3
+*.db
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.next/
