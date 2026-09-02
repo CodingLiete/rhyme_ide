@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: rhyme_engine_db
+    restart: always
+    environment:
+      POSTGRES_USER: engine_admin
+      POSTGRES_PASSWORD: engine_password
+      POSTGRES_DB: rhyme_ide
+      # Force l'encodage pour les caractères API
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8" 
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
