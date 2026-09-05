@@ -1,0 +1,18 @@
+language: "fr-FR"
+tone: "expert"
+reviews:
+  # Force l'IA à avoir un niveau d'exigence élevé
+  profile: "senior_backend_engineer"
+  request_changes_workflow: true
+  
+  # Directives ciblées par répertoire
+  path_instructions:
+    - path: "backend/app/api/**/*.py"
+      instructions: "Vérifie les failles de type 'N+1 queries' avec SQLModel et la bonne gestion du cycle de vie de l'AsyncSession FastAPI."
+      
+    - path: "backend/app/services/**/*.py"
+      instructions: "Analyse strictement la complexité temporelle O(N) et spatiale. Optimise les opérations vectorielles NumPy pour l'algorithme de Levenshtein."
+      
+chat:
+  # Permet d'interagir avec le bot dans les commentaires GitHub
+  enabled: true
